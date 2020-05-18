@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #echo "Start Ansible"
-sudo yum -y update 
-sudo yum -y install epel-release
-sudo yum -y install ansible
+#sudo yum -y update 
+#sudo yum -y install epel-release
+#sudo yum -y install ansible
 sudo yum -y install python3
 sudo yum -y install python3-pip
-
+sudo ln -s /usr/bin/python3 /usr/bin/python
 
 # fix the hosts
 mkdir -p /root/.ssh

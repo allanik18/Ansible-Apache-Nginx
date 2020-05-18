@@ -1,11 +1,12 @@
 #!/bin/bash
 
 #echo "Start Ansible"
-sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt -y update
-sudo apt install -y ansible
+#sudo apt-add-repository --yes --update ppa:ansible/ansible
+#sudo apt -y update
+#sudo apt install -y ansible
 sudo apt install -y python3
 sudo apt install -y python-pip
+sudo ln -s /usr/bin/python3 /usr/bin/python
 
 # fix the hosts
 mkdir -p /root/.ssh
