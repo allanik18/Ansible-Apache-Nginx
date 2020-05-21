@@ -2,36 +2,11 @@
 
 - hosts: apache
   become: true
-  tasks:
-  - name: install apache2
-    apt: name=apache2 update_cache=yes state=latest
-  
-  - name: Insert Index Page
-    template:
-      src: index.html
-      dest: /var/www/html/index.html
+  roles:
+    - roles/hw_role_apache
 
-- name: Install nginx
-  hosts: nginx
+- hosts: nginx
   become: true
+  roles:
+    - roles/hw_role_nginx
 
-  tasks:
-  - name: Add epel-release repo
-    yum:
-      name: epel-release
-      state: present
-
-  - name: Install nginx
-    yum:
-      name: nginx
-      state: present
-
-  - name: Insert Index Page
-    template:
-      src: index.html
-      dest: /usr/share/nginx/html/index.html
-
-  - name: Start NGiNX
-    service:
-      name: nginx
-      state: started

@@ -25,7 +25,7 @@ $ cp ~/.ssh/id_rsa* env/ssh_keys
 ```bash
 $ vagrant up
 ```
-3. Optionally update content of *ansible/index.html*
+3. Optionally update content of *ansible/roles/hw_role_nginx/index.html* or *ansible/roles/hw_role_apache/index.html*
    
 4. Run ansible-playbook
 ```bash
@@ -63,10 +63,10 @@ $ ansible all -m ping -u root
 3. Check webservers
 ```bash
 $ curl http://10.10.0.4
-it works!!!
+Apache it works!!!
 
 $ curl http://10.10.0.2
-it works!!!
+Nginx - it works!!!
 ```
 
 
