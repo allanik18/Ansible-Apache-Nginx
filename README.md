@@ -1,8 +1,4 @@
-# HW_Ansible - practice with Ansible
-
-Ansible is an agentless automation tool that by default manages machines over the SSH protocol.
-
-## Description of HW
+## Description
 
 1. Run two VM by Vagrant  on Ubuntu and CentOS.
 2. Create and run playbook by Ansible that will install Apache for the VM on Ubuntu, install Nginx on CentOS.
